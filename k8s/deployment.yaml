@@ -14,7 +14,7 @@ spec:
         app: fake-app
     spec:
       containers:
-        - name: fake-app
-          image: nginx:latest
+        - name: argocd-fake-app
+          image: argocdfakeapp
           ports:
             - containerPort: 80
