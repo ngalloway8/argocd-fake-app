@@ -1,0 +1,20 @@
+# k8s/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fake-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fake-app
+  template:
+    metadata:
+      labels:
+        app: fake-app
+    spec:
+      containers:
+        - name: fake-app
+          image: nginx:latest
+          ports:
+            - containerPort: 80
